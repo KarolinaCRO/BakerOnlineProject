@@ -1,3 +1,4 @@
+@register
 Feature: Creating an account
   User story: As a visitor user, I want to be able to create an account.
 

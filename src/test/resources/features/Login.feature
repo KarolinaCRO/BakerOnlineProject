@@ -1,3 +1,4 @@
+@login
 Feature: Login
   User story: As a registered user, I want to be able to log in.
 

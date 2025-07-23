@@ -1,3 +1,4 @@
+@order
 Feature: Ordering
   User story: As a logged-in user, I want to be able to order one or more products and select Payment at pickup as a payment method.
 

@@ -39,7 +39,7 @@ public class RegisterPage {
     public WebElement acceptPrivacyPolicyButton;
 
     @FindBy(xpath = "//*[text()='Hurray! Your account has been created.']")
-    public WebElement registrationSuccessMessage; //TODO: change the locator
+    public WebElement registrationSuccessMessage;
 
     @FindBy(css = ".error li")
     public WebElement emailAlreadyInUseMessage;

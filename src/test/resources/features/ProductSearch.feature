@@ -1,3 +1,4 @@
+@search
 Feature: Product search
   User story: As a user (visitor or logged-in), I want to search for products using the search bar,
   so that I can quickly find items I'm interested in without browsing through all categories.

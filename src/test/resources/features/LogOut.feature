@@ -1,3 +1,4 @@
+@logout
 Feature: Log out
   User story: As a logged-in user, I want to be able to log out.
 

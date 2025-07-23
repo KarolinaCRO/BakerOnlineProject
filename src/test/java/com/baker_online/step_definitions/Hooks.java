@@ -12,14 +12,12 @@ public class Hooks {
 
     @Before("@mailslurp")
     public void setupMailSlurp() {
-        System.out.println("Setting up MailSlurp for email testing");
         MailSlurpUtils.setup();
-        MailSlurpUtils.cleanupInbox(); // Clean up any existing emails
+        MailSlurpUtils.cleanupInbox();
     }
 
     @After("@mailslurp")
     public void cleanupMailSlurp() {
-        System.out.println("Cleaning up MailSlurp inbox");
         MailSlurpUtils.cleanupInbox();
     }
 

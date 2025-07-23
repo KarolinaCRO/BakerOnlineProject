@@ -1,10 +1,5 @@
 package com.baker_online.utilities;
 
-/*
-In this class only general utility methods that are not related to some specific page.
- */
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -26,6 +21,7 @@ public class BrowserUtils {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeToWaitInSec));
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
+
     /**
      * Waits for provided element to be clickable
      *
@@ -40,23 +36,16 @@ public class BrowserUtils {
     }
 
     /**
-     * Waits for element matching the locator to be clickable
+     * Checks whether a given element is visible on the page
      *
-     * @param locator
-     * @param timeout
-     * @return
+     * @param element the WebElement to check
+     * @return true if the element is displayed; false if it is not in the DOM or not visible
      */
-    public static WebElement waitForClickability(By locator, int timeout) {
-        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(0));
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));
-        return wait.until(ExpectedConditions.elementToBeClickable(locator));
-    }
-
     public static boolean isElementVisible(WebElement element) {
         try {
             return element.isDisplayed();
         } catch (NoSuchElementException e) {
-            return false; // Element not in the DOM at all
+            return false;
         }
     }
 }

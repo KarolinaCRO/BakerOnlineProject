@@ -24,7 +24,7 @@ public class Register_StepDefinitions {
     }
 
     @When("user fills out the registration form with valid data")
-    public void user_fills_out_the_registration_form_with_valid_data() throws InterruptedException {
+    public void user_fills_out_the_registration_form_with_valid_data() {
         registerPage.emailInputBox.sendKeys(faker.internet().emailAddress());
         registerPage.firstNameInputBox.sendKeys(faker.name().firstName());
         password = faker.internet().password(6, 64, true, true, true);
@@ -51,7 +51,6 @@ public class Register_StepDefinitions {
 
     @Then("a success message {string} should be displayed")
     public void a_success_message_should_be_displayed(String successMessage) {
-        System.out.println("registerPage.registrationSuccessMessage.getText() = " + registerPage.registrationSuccessMessage.getText());
         assertEquals(successMessage, registerPage.registrationSuccessMessage.getText());
     }
 

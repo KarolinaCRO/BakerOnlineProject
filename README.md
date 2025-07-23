@@ -49,6 +49,7 @@ src
 │   │   │   │       └── ConfigurationReader.java
 |   |   |   |       └── Driver.java
 |   |   |   |       └── BrowserUtils.java
+|   |   |   |       └── MailSlurpUtils.java
 │   └── resources
 │       ├── features
 │       │   └── FeatureFiles.feature
